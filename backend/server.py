@@ -1,26 +1,48 @@
+import sys
+import asyncio
+
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+
 import os
 import uvicorn
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
-from routes import route
 from dotenv import load_dotenv
+
+from routes.routes import router
+from utilities.db import pool
+
 load_dotenv()
 
-PORT = os.getenv('PORT')
-print(PORT)
+PORT = int(os.getenv("PORT", 5000))
 
 
-app = FastAPI()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await pool.open()
+    yield
+    await pool.close()
 
-# Register API Routes
-app.include_router()
+
+app = FastAPI(lifespan=lifespan)
 
 
-# Global Error Handler Middleware
+@app.get("/db-check")
+async def db_check():
+    async with pool.connection() as conn:
+        cur = await conn.execute("SELECT 1")
+        return {"ok": (await cur.fetchone())[0] == 1}
+
+
+app.include_router(router)
+
+
 @app.exception_handler(StarletteHTTPException)
 async def http_error_handler(request, err):
-    print("Internal Server Error:", err)
+    print("HTTP Error:", err)
     return JSONResponse(
         status_code=err.status_code,
         content={"error": {"message": str(err.detail) or "Internal Server Error"}},
@@ -37,6 +59,5 @@ async def global_error_handler(request, err):
 
 
 if __name__ == "__main__":
-    PORT = int(os.environ.get("PORT", 3000))
     print(f"Server listening on port {PORT}")
-    uvicorn.run(app, port=PORT)
+    uvicorn.run("server:app", port=PORT, reload=True)

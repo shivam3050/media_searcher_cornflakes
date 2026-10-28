@@ -1,100 +1,208 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 840" width="100%" height="100%" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmMWUyZmY1NS03OTIzLTRmMTEtYmMyZS0yMjYwYWRmMzhmYjYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaMBibVjPOrWG4A3qoM+KeaEAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDphNzA4OTA0Mi04ZTY4LTRkMjktOTJjYi0zYWNjZTIwNjY1NGZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo4awHQhfYSzLy2kb/aLZSfwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggHfiXP+MDDHIIHDXbbO42ObPhtRCW2n7uwXWbXwO0XV+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaCzjm3CDWJeQwA/8Azo5qsgAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCAMXBX+MshNNUE1V7+JQ2n2DB5U6MqiKfx9o+UsrcYfaWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiZZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmYxZTJmZjU1LTc5MjMtNGYxMS1iYzJlLTIyNjBhZGYzOGZiNi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmIwNGVjY2E5LWVhYmItNGMxYi04MTRlLTA0ZTAwYmE4ZDg0NnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAd+Jc/4wMMcggcNdts7jY5s+G1EJbafu7BdZtfA7RdX6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggo4okC3ECbLdxmECSOhmdn7J36kN/i3HFU28tLlDh0yeiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggGvf9phP9jZRoBQc4IfLw537pUz2tAT4VXCofaCcXAnJ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCLVGqs7kNvRGPL2g67YMDVarvTKSYBRFbgsp9ZAg3VbOehTwPacz0UzCXu94J7l8Dap+hq3U7tJW1Oo80BGxJ0=</c2pa:manifest></metadata>
   <defs>
-    <!-- Shadow Filter -->
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.08" />
-    </filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb" /></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0d9488" /></marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b" /></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08" /></filter>
   </defs>
-
   <style>
     .bg { fill: #f8fafc; }
-    
-    /* Table Container Styling */
-    .table-box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 10; ry: 10; }
-    .header-sources { fill: #2563eb; }
-    .header-records { fill: #0d9488; }
-    
-    /* Typography */
-    .table-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; }
-    .col-header { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
-    .col-name { font-family: 'Consolas', 'Courier New', monospace; font-size: 15px; font-weight: 600; fill: #1e293b; }
-    .col-pk { fill: #d97706; font-size: 11px; font-weight: 700; font-family: 'Segoe UI', sans-serif; }
-    .col-fk { fill: #2563eb; font-size: 11px; font-weight: 700; font-family: 'Segoe UI', sans-serif; }
-    
-    /* Divider lines */
-    .row-divider { stroke: #f1f5f9; stroke-width: 1.5; }
-    .header-divider { stroke: #e2e8f0; stroke-width: 2; }
-    
-    /* Relationship Line */
-    .rel-line { stroke: #2563eb; stroke-width: 2; stroke-dasharray: 6 4; fill: none; }
+    .card { fill: #ffffff; stroke: #e2e8f0; stroke-width: 1.5; }
+    .divider { stroke: #f1f5f9; stroke-width: 1; }
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .title { font-size: 15px; font-weight: 700; fill: #ffffff; }
+    .sub { font-size: 10px; font-weight: 600; fill: #94a3b8; letter-spacing: 0.8px; }
+    .col { font-size: 13px; font-weight: 500; fill: #1e293b; }
+    .type { font-size: 11px; fill: #94a3b8; text-anchor: end; }
+    .foot { font-size: 11px; font-style: italic; fill: #64748b; }
+    .badge-pk { fill: #fef3c7; }
+    .badge-fk { fill: #dbeafe; }
+    .badge-pk-t { font-size: 9px; font-weight: 700; fill: #b45309; text-anchor: middle; }
+    .badge-fk-t { font-size: 9px; font-weight: 700; fill: #1d4ed8; text-anchor: middle; }
+    .lbl { font-size: 11px; fill: #64748b; text-anchor: middle; }
+    .l-blue { stroke: #2563eb; stroke-width: 2; fill: none; stroke-dasharray: 4 4; stroke-linecap: round; stroke-linejoin: round; }
+    .l-teal { stroke: #0d9488; stroke-width: 2; fill: none; stroke-dasharray: 4 4; stroke-linecap: round; stroke-linejoin: round; }
+    .l-gray { stroke: #64748b; stroke-width: 2; fill: none; stroke-dasharray: 4 4; stroke-linecap: round; stroke-linejoin: round; }
   </style>
-
-  <!-- Background -->
   <rect width="100%" height="100%" class="bg" />
 
-  <!-- TABLE 1: sources -->
-  <g transform="translate(60, 80)" filter="url(#shadow)">
-    <rect width="340" height="260" class="table-box" />
-    
-    <!-- Table Header -->
-    <path d="M 0 10 A 10 10 0 0 1 10 0 L 330 0 A 10 10 0 0 1 340 10 L 340 45 L 0 45 Z" class="header-sources" />
-    <text x="20" y="28" class="table-title">table sources</text>
-    
-    <!-- Rows -->
-    <!-- Column Headers -->
-    <text x="20" y="70" class="col-header">Column Name</text>
-    <line x1="0" y1="82" x2="340" y2="82" class="header-divider" />
-    
-    <!-- Row 1: source_id -->
-    <text x="20" y="115" class="col-name">source_id</text>
-    <text x="280" y="115" class="col-pk">PK</text>
-    <line x1="20" y1="135" x2="320" y2="135" class="row-divider" />
-    
-    <!-- Row 2: state -->
-    <text x="20" y="168" class="col-name">state</text>
-    <line x1="20" y1="188" x2="320" y2="188" class="row-divider" />
-    
-    <!-- Row 3: last_timestamp -->
-    <text x="20" y="221" class="col-name">last_timestamp</text>
+  <g filter="url(#shadow)">
+    <rect x="40" y="40" width="300" height="194" rx="10" ry="10" class="card" />
+    <rect x="40" y="40" width="300" height="36" rx="10" ry="10" fill="#2563eb" />
+    <rect x="40" y="66" width="300" height="10" fill="#2563eb" />
+    <text x="56" y="63" class="title">table: sources</text>
+    <text x="56" y="92" class="sub">COLUMN NAME</text>
+    <text x="324" y="92" class="sub" text-anchor="end">TYPE</text>
+    <line x1="52" y1="100" x2="328" y2="100" class="divider" />
+    <rect x="56" y="106" width="26" height="15" rx="4" ry="4" class="badge-pk" />
+    <text x="69" y="117" class="badge-pk-t">PK</text>
+    <text x="92" y="118" class="col">slug</text>
+    <text x="324" y="118" class="type">TEXT</text>
+    <line x1="52" y1="126" x2="328" y2="126" class="divider" />
+    <text x="92" y="144" class="col">status</text>
+    <text x="324" y="144" class="type">TEXT</text>
+    <line x1="52" y1="152" x2="328" y2="152" class="divider" />
+    <text x="92" y="170" class="col">cursor</text>
+    <text x="324" y="170" class="type">TEXT</text>
+    <line x1="52" y1="178" x2="328" y2="178" class="divider" />
+    <text x="92" y="196" class="col">updated_at</text>
+    <text x="324" y="196" class="type">TIMESTAMPTZ</text>
+    <text x="56" y="223" class="foot">status: enabled | disabled | quarantined</text>
   </g>
-
-  <!-- TABLE 2: records -->
-  <g transform="translate(480, 80)" filter="url(#shadow)">
-    <rect width="360" height="360" class="table-box" />
-    
-    <!-- Table Header -->
-    <path d="M 0 10 A 10 10 0 0 1 10 0 L 350 0 A 10 10 0 0 1 360 10 L 360 45 L 0 45 Z" class="header-records" />
-    <text x="20" y="28" class="table-title">table records</text>
-    
-    <!-- Rows -->
-    <!-- Column Headers -->
-    <text x="20" y="70" class="col-header">Column Name</text>
-    <line x1="0" y1="82" x2="360" y2="82" class="header-divider" />
-    
-    <!-- Row 1: record_id -->
-    <text x="20" y="115" class="col-name">record_id</text>
-    <text x="300" y="115" class="col-pk">PK</text>
-    <line x1="20" y1="135" x2="340" y2="135" class="row-divider" />
-    
-    <!-- Row 2: text_vector -->
-    <text x="20" y="168" class="col-name">text_vector</text>
-    <line x1="20" y1="188" x2="340" y2="188" class="row-divider" />
-    
-    <!-- Row 3: visual_vector -->
-    <text x="20" y="221" class="col-name">visual_vector</text>
-    <line x1="20" y1="241" x2="340" y2="241" class="row-divider" />
-
-    <!-- Row 4: state -->
-    <text x="20" y="274" class="col-name">state</text>
-    <line x1="20" y1="294" x2="340" y2="294" class="row-divider" />
-
-    <!-- Row 5: source_id -->
-    <text x="20" y="327" class="col-name">source_id</text>
-    <text x="300" y="327" class="col-fk">FK</text>
+  <g filter="url(#shadow)">
+    <rect x="40" y="290" width="300" height="324" rx="10" ry="10" class="card" />
+    <rect x="40" y="290" width="300" height="36" rx="10" ry="10" fill="#d97706" />
+    <rect x="40" y="316" width="300" height="10" fill="#d97706" />
+    <text x="56" y="313" class="title">table: jobs</text>
+    <text x="56" y="342" class="sub">COLUMN NAME</text>
+    <text x="324" y="342" class="sub" text-anchor="end">TYPE</text>
+    <line x1="52" y1="350" x2="328" y2="350" class="divider" />
+    <rect x="56" y="356" width="26" height="15" rx="4" ry="4" class="badge-pk" />
+    <text x="69" y="367" class="badge-pk-t">PK</text>
+    <text x="92" y="368" class="col">id</text>
+    <text x="324" y="368" class="type">BIGSERIAL</text>
+    <line x1="52" y1="376" x2="328" y2="376" class="divider" />
+    <text x="92" y="394" class="col">type</text>
+    <text x="324" y="394" class="type">TEXT</text>
+    <line x1="52" y1="402" x2="328" y2="402" class="divider" />
+    <rect x="56" y="408" width="26" height="15" rx="4" ry="4" class="badge-fk" />
+    <text x="69" y="419" class="badge-fk-t">FK</text>
+    <text x="92" y="420" class="col">source</text>
+    <text x="324" y="420" class="type">TEXT</text>
+    <line x1="52" y1="428" x2="328" y2="428" class="divider" />
+    <text x="92" y="446" class="col">status</text>
+    <text x="324" y="446" class="type">TEXT</text>
+    <line x1="52" y1="454" x2="328" y2="454" class="divider" />
+    <text x="92" y="472" class="col">processed</text>
+    <text x="324" y="472" class="type">INT</text>
+    <line x1="52" y1="480" x2="328" y2="480" class="divider" />
+    <text x="92" y="498" class="col">error</text>
+    <text x="324" y="498" class="type">TEXT</text>
+    <line x1="52" y1="506" x2="328" y2="506" class="divider" />
+    <text x="92" y="524" class="col">created_at</text>
+    <text x="324" y="524" class="type">TIMESTAMPTZ</text>
+    <line x1="52" y1="532" x2="328" y2="532" class="divider" />
+    <text x="92" y="550" class="col">started_at</text>
+    <text x="324" y="550" class="type">TIMESTAMPTZ</text>
+    <line x1="52" y1="558" x2="328" y2="558" class="divider" />
+    <text x="92" y="576" class="col">finished_at</text>
+    <text x="324" y="576" class="type">TIMESTAMPTZ</text>
+    <text x="56" y="603" class="foot">type: ingest | reembed</text>
   </g>
-
-  <!-- Relationship Connector (source_id to source_id) -->
-  <path d="M 400 195 L 440 195 L 440 407 L 480 407" class="rel-line" />
-  <circle cx="400" cy="195" r="4" fill="#2563eb" />
-  <circle cx="480" cy="407" r="4" fill="#2563eb" />
+  <g filter="url(#shadow)">
+    <rect x="440" y="40" width="360" height="532" rx="10" ry="10" class="card" />
+    <rect x="440" y="40" width="360" height="36" rx="10" ry="10" fill="#0d9488" />
+    <rect x="440" y="66" width="360" height="10" fill="#0d9488" />
+    <text x="456" y="63" class="title">table: records</text>
+    <text x="456" y="92" class="sub">COLUMN NAME</text>
+    <text x="784" y="92" class="sub" text-anchor="end">TYPE</text>
+    <line x1="452" y1="100" x2="788" y2="100" class="divider" />
+    <rect x="456" y="106" width="26" height="15" rx="4" ry="4" class="badge-pk" />
+    <text x="469" y="117" class="badge-pk-t">PK</text>
+    <text x="492" y="118" class="col">id</text>
+    <text x="784" y="118" class="type">BIGSERIAL</text>
+    <line x1="452" y1="126" x2="788" y2="126" class="divider" />
+    <rect x="456" y="132" width="26" height="15" rx="4" ry="4" class="badge-fk" />
+    <text x="469" y="143" class="badge-fk-t">FK</text>
+    <text x="492" y="144" class="col">source</text>
+    <text x="784" y="144" class="type">TEXT</text>
+    <line x1="452" y1="152" x2="788" y2="152" class="divider" />
+    <text x="492" y="170" class="col">source_ref</text>
+    <text x="784" y="170" class="type">TEXT</text>
+    <line x1="452" y1="178" x2="788" y2="178" class="divider" />
+    <text x="492" y="196" class="col">title</text>
+    <text x="784" y="196" class="type">TEXT</text>
+    <line x1="452" y1="204" x2="788" y2="204" class="divider" />
+    <text x="492" y="222" class="col">caption</text>
+    <text x="784" y="222" class="type">TEXT</text>
+    <line x1="452" y1="230" x2="788" y2="230" class="divider" />
+    <text x="492" y="248" class="col">tags</text>
+    <text x="784" y="248" class="type">TEXT[]</text>
+    <line x1="452" y1="256" x2="788" y2="256" class="divider" />
+    <text x="492" y="274" class="col">year</text>
+    <text x="784" y="274" class="type">INT</text>
+    <line x1="452" y1="282" x2="788" y2="282" class="divider" />
+    <text x="492" y="300" class="col">license</text>
+    <text x="784" y="300" class="type">TEXT</text>
+    <line x1="452" y1="308" x2="788" y2="308" class="divider" />
+    <text x="492" y="326" class="col">nsfw_score</text>
+    <text x="784" y="326" class="type">REAL</text>
+    <line x1="452" y1="334" x2="788" y2="334" class="divider" />
+    <text x="492" y="352" class="col">visual_vec</text>
+    <text x="784" y="352" class="type">REAL[]</text>
+    <line x1="452" y1="360" x2="788" y2="360" class="divider" />
+    <text x="492" y="378" class="col">visual_ver</text>
+    <text x="784" y="378" class="type">INT</text>
+    <line x1="452" y1="386" x2="788" y2="386" class="divider" />
+    <text x="492" y="404" class="col">text_vec</text>
+    <text x="784" y="404" class="type">REAL[]</text>
+    <line x1="452" y1="412" x2="788" y2="412" class="divider" />
+    <text x="492" y="430" class="col">text_ver</text>
+    <text x="784" y="430" class="type">INT</text>
+    <line x1="452" y1="438" x2="788" y2="438" class="divider" />
+    <text x="492" y="456" class="col">phash</text>
+    <text x="784" y="456" class="type">TEXT</text>
+    <line x1="452" y1="464" x2="788" y2="464" class="divider" />
+    <text x="492" y="482" class="col">thumb</text>
+    <text x="784" y="482" class="type">BYTEA</text>
+    <line x1="452" y1="490" x2="788" y2="490" class="divider" />
+    <text x="492" y="508" class="col">taken_down</text>
+    <text x="784" y="508" class="type">BOOLEAN</text>
+    <line x1="452" y1="516" x2="788" y2="516" class="divider" />
+    <text x="492" y="534" class="col">updated_at</text>
+    <text x="784" y="534" class="type">TIMESTAMPTZ</text>
+    <text x="456" y="561" class="foot">UNIQUE (source, source_ref)  -&gt; upsert key</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="440" y="630" width="360" height="168" rx="10" ry="10" class="card" />
+    <rect x="440" y="630" width="360" height="36" rx="10" ry="10" fill="#475569" />
+    <rect x="440" y="656" width="360" height="10" fill="#475569" />
+    <text x="456" y="653" class="title">table: index_state</text>
+    <text x="456" y="682" class="sub">COLUMN NAME</text>
+    <text x="784" y="682" class="sub" text-anchor="end">TYPE</text>
+    <line x1="452" y1="690" x2="788" y2="690" class="divider" />
+    <rect x="456" y="696" width="26" height="15" rx="4" ry="4" class="badge-pk" />
+    <text x="469" y="707" class="badge-pk-t">PK</text>
+    <text x="492" y="708" class="col">id (always 1)</text>
+    <text x="784" y="708" class="type">INT</text>
+    <line x1="452" y1="716" x2="788" y2="716" class="divider" />
+    <text x="492" y="734" class="col">active_version</text>
+    <text x="784" y="734" class="type">INT</text>
+    <line x1="452" y1="742" x2="788" y2="742" class="divider" />
+    <text x="492" y="760" class="col">index_version</text>
+    <text x="784" y="760" class="type">BIGINT</text>
+    <text x="456" y="787" class="foot">one row: live embedding version + cache version</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="860" y="40" width="240" height="194" rx="10" ry="10" class="card" />
+    <rect x="860" y="40" width="240" height="36" rx="10" ry="10" fill="#dc2626" />
+    <rect x="860" y="66" width="240" height="10" fill="#dc2626" />
+    <text x="876" y="63" class="title">table: audit_log</text>
+    <text x="876" y="92" class="sub">COLUMN NAME</text>
+    <text x="1084" y="92" class="sub" text-anchor="end">TYPE</text>
+    <line x1="872" y1="100" x2="1088" y2="100" class="divider" />
+    <rect x="876" y="106" width="26" height="15" rx="4" ry="4" class="badge-pk" />
+    <text x="889" y="117" class="badge-pk-t">PK</text>
+    <text x="912" y="118" class="col">id</text>
+    <text x="1084" y="118" class="type">BIGSERIAL</text>
+    <line x1="872" y1="126" x2="1088" y2="126" class="divider" />
+    <text x="912" y="144" class="col">record_id</text>
+    <text x="1084" y="144" class="type">BIGINT</text>
+    <line x1="872" y1="152" x2="1088" y2="152" class="divider" />
+    <text x="912" y="170" class="col">reason</text>
+    <text x="1084" y="170" class="type">TEXT</text>
+    <line x1="872" y1="178" x2="1088" y2="178" class="divider" />
+    <text x="912" y="196" class="col">created_at</text>
+    <text x="1084" y="196" class="type">TIMESTAMPTZ</text>
+    <text x="876" y="223" class="foot">append-only (INSERT only)</text>
+  </g>
+  <path d="M 340 113 L 390 113 L 390 139 L 440 139" class="l-blue" marker-end="url(#arrow-blue)" />
+  <path d="M 190 290 L 190 234" class="l-blue" marker-end="url(#arrow-blue)" />
+  <rect x="200" y="252" width="120" height="18" rx="4" ry="4" fill="#f8fafc" />
+  <text x="260" y="265" class="lbl">jobs.source = slug</text>
+  <path d="M 800 113 L 830 113 L 830 139 L 860 139" class="l-gray" marker-end="url(#arrow-gray)" />
 </svg>
