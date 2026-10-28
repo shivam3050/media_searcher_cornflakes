@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 850" width="100%" height="100%">
+  <defs>
+    <!-- Arrowhead Marker -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569" />
+    </marker>
+    
+    <!-- Blue Arrowhead Marker -->
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb" />
+    </marker>
+
+    <!-- Purple Arrowhead Marker -->
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#7c3aed" />
+    </marker>
+
+    <!-- Soft Drop Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.07" />
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: #f8fafc; }
+    
+    /* Box & Node Styles */
+    .oval-node { fill: #ffffff; stroke: #475569; stroke-width: 2; rx: 30; ry: 30; }
+    .admin-node { fill: #eff6ff; stroke: #2563eb; stroke-width: 2; rx: 30; ry: 30; }
+    .public-node { fill: #f5f3ff; stroke: #7c3aed; stroke-width: 2; rx: 30; ry: 30; }
+    .process-node { fill: #fef3c7; stroke: #d97706; stroke-width: 2.5; rx: 35; ry: 35; }
+    .db-node { fill: #e0f2fe; stroke: #0284c7; stroke-width: 2.5; rx: 30; ry: 30; }
+    
+    /* Text Styles */
+    .text-main { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 16px; fill: #1e293b; text-anchor: middle; }
+    .text-blue { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 16px; fill: #1d4ed8; text-anchor: middle; }
+    .text-purple { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 16px; fill: #6d28d9; text-anchor: middle; }
+    .text-amber { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; font-size: 16px; fill: #92400e; text-anchor: middle; }
+    .text-db { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700; font-size: 17px; fill: #0369a1; text-anchor: middle; }
+    
+    .label-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 14px; fill: #64748b; text-anchor: middle; }
+    
+    /* Lines */
+    .flow-line { stroke: #475569; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .blue-line { stroke: #2563eb; stroke-width: 2; fill: none; stroke-dasharray: 4 4; stroke-linecap: round; }
+    .purple-line { stroke: #7c3aed; stroke-width: 2; fill: none; stroke-dasharray: 4 4; stroke-linecap: round; }
+  </style>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" class="bg" />
+
+  <!-- ================= LEFT COLUMN: Public Request Flow ================= -->
+  
+  <!-- Public Request Node -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="60" width="220" height="60" class="public-node" />
+    <text x="190" y="96" class="text-purple">Public request</text>
+  </g>
+
+  <!-- Curve: on public worker -->
+  <path d="M 190 120 C 130 160, 130 220, 190 260" class="purple-line" marker-end="url(#arrow-purple)" />
+  <rect x="80" y="175" width="110" height="26" fill="#f8fafc" rx="4" />
+  <text x="135" y="193" class="label-text" fill="#6d28d9">on public worker</text>
+
+  <!-- Request Process Node -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="260" width="220" height="60" class="public-node" />
+    <text x="190" y="296" class="text-purple">request process</text>
+  </g>
+
+  <!-- ================= RIGHT COLUMN: Admin & Main Pipeline Flow ================= -->
+
+  <!-- Admin Command Node -->
+  <g filter="url(#shadow)">
+    <rect x="650" y="60" width="220" height="60" class="admin-node" />
+    <text x="760" y="96" class="text-blue">admin command</text>
+  </g>
+
+  <!-- Curve: on private worker -->
+  <path d="M 760 120 C 700 160, 700 220, 760 260" class="blue-line" marker-end="url(#arrow-blue)" />
+  <rect x="645" y="175" width="120" height="26" fill="#f8fafc" rx="4" />
+  <text x="705" y="193" class="label-text" fill="#1d4ed8">on private worker</text>
+
+  <!-- Run Node -->
+  <g filter="url(#shadow)">
+    <rect x="690" y="260" width="140" height="60" class="oval-node" />
+    <text x="760" y="296" class="text-main">run</text>
+  </g>
+
+  <!-- Connector: run -> process to PostgreSQL (async/await) -->
+  <path d="M 760 320 L 760 460" class="flow-line" marker-end="url(#arrow)" />
+  <rect x="705" y="375" width="110" height="26" fill="#f8fafc" rx="4" />
+  <text x="760" y="393" class="label-text">async / await</text>
+
+  <!-- Middle Process Node: process to PostgreSQL -->
+  <g filter="url(#shadow)">
+    <rect x="610" y="460" width="300" height="70" class="process-node" />
+    <text x="760" y="502" class="text-amber">process to PostgreSQL</text>
+  </g>
+
+  <!-- ================= BOTTOM BRANCHES ================= -->
+
+  <!-- Left Input Branch: media Locations -->
+  <g filter="url(#shadow)">
+    <rect x="420" y="660" width="220" height="65" class="oval-node" />
+    <text x="530" y="700" class="text-main">media Locations</text>
+  </g>
+
+  <!-- Arrow: media Locations -> process to PostgreSQL -->
+  <path d="M 530 660 L 710 530" class="flow-line" marker-end="url(#arrow)" />
+
+  <!-- Right Output Branch: PostgreSQL -->
+  <g filter="url(#shadow)">
+    <rect x="670" y="660" width="220" height="65" class="db-node" />
+    <text x="780" y="700" class="text-db">PostgreSQL</text>
+  </g>
+
+  <!-- Arrow: process to PostgreSQL -> PostgreSQL -->
+  <path d="M 760 530 L 780 660" class="flow-line" marker-end="url(#arrow)" />
+
+</svg>
