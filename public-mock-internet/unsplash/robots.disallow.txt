@@ -1,0 +1,3 @@
+# Rename this file to robots.txt to test the 'robots: disallow -> quarantine' trap.
+User-agent: *
+Disallow: /
