@@ -2,189 +2,153 @@
 
 Output of `make eval` (`python eval.py`). Numbers we are not happy with are kept on purpose.
 
-- Run at: 2026-10-28 06:31:28 UTC
-- Git commit: 74ea69e
+- Run at: 2026-10-28 09:21:35 UTC
+- Git commit: unknown
 - Server: http://localhost:5000
 
 ## Summary
 
 | # | Scenario | Result | Finding |
 |---|---|---|---|
-| T1 | kill -9 the ingest mid-batch | **ERROR** | UndefinedTable: relation "records" does not exist
-LINE 1: DELETE FROM records WHERE source = 'met-museum'
-                    ^
- |
-| T3 | unknown licence never appears | **ERROR** | UndefinedTable: relation "records" does not exist
-LINE 1: SELECT r.id::text, r.title, r.caption FROM records r
-                                                   ^
- |
-| T4 | version mismatch is refused loudly | **ERROR** | UndefinedTable: relation "index_state" does not exist
+| T1 | kill -9 the ingest mid-batch | **ERROR** | IndexError: list index out of range |
+| T3 | unknown licence never appears | **INCONCLUSIVE** | no unknown-licence record in an enabled source; ingest 'user-uploads' first |
+| T4 | version mismatch is refused loudly | **ERROR** | UndefinedColumn: column "live_version" does not exist
 LINE 1: SELECT live_version FROM index_state LIMIT 1
-                                 ^
- |
-| T6 | takedown disappears from cached pages within 1 s | **ERROR** | UndefinedTable: relation "records" does not exist
-LINE 1: SELECT r.id::text, r.title, r.caption FROM records r
-                                                   ^
- |
-| T9 | paging is stable while 500 rows are ingested | **ERROR** | UndefinedTable: relation "index_state" does not exist
+               ^
+HINT:  Perhaps you meant to reference the column "index_state.active_version". |
+| T6 | takedown disappears from cached pages within 1 s | **ERROR** | UndefinedColumn: column r.status does not exist
+LINE 3: ...        WHERE r.license <> 'unknown' AND COALESCE(r.status, ...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "so.status". |
+| T9 | paging is stable while 500 rows are ingested | **ERROR** | UndefinedColumn: column "live_version" does not exist
 LINE 1: SELECT live_version FROM index_state LIMIT 1
-                                 ^
- |
-| T12 | huge and injection-style queries | **FAIL** | 10,000 characters: HTTP 500; 10,000 characters: took 2.06s; sql injection: HTTP 500; sql injection: took 2.05s; boolean injection: HTTP 500; boolean injection: took 2.05s; null bytes and unicode: HTTP 500; null bytes and unicode: took 2.04s; records table is gone |
+               ^
+HINT:  Perhaps you meant to reference the column "index_state.active_version". |
+| T12 | huge and injection-style queries | **FAIL** | sql injection: HTTP 500; boolean injection: HTTP 500; null bytes and unicode: HTTP 500 |
 
 ## Numbers we are not happy with
 
-- **T1 (ERROR)**: UndefinedTable: relation "records" does not exist
-LINE 1: DELETE FROM records WHERE source = 'met-museum'
-                    ^
-
-- **T3 (ERROR)**: UndefinedTable: relation "records" does not exist
-LINE 1: SELECT r.id::text, r.title, r.caption FROM records r
-                                                   ^
-
-- **T4 (ERROR)**: UndefinedTable: relation "index_state" does not exist
+- **T1 (ERROR)**: IndexError: list index out of range
+- **T3 (INCONCLUSIVE)**: no unknown-licence record in an enabled source; ingest 'user-uploads' first
+- **T4 (ERROR)**: UndefinedColumn: column "live_version" does not exist
 LINE 1: SELECT live_version FROM index_state LIMIT 1
-                                 ^
-
-- **T6 (ERROR)**: UndefinedTable: relation "records" does not exist
-LINE 1: SELECT r.id::text, r.title, r.caption FROM records r
-                                                   ^
-
-- **T9 (ERROR)**: UndefinedTable: relation "index_state" does not exist
+               ^
+HINT:  Perhaps you meant to reference the column "index_state.active_version".
+- **T6 (ERROR)**: UndefinedColumn: column r.status does not exist
+LINE 3: ...        WHERE r.license <> 'unknown' AND COALESCE(r.status, ...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "so.status".
+- **T9 (ERROR)**: UndefinedColumn: column "live_version" does not exist
 LINE 1: SELECT live_version FROM index_state LIMIT 1
-                                 ^
-
-- **T12 (FAIL)**: 10,000 characters: HTTP 500; 10,000 characters: took 2.06s; sql injection: HTTP 500; sql injection: took 2.05s; boolean injection: HTTP 500; boolean injection: took 2.05s; null bytes and unicode: HTTP 500; null bytes and unicode: took 2.04s; records table is gone
+               ^
+HINT:  Perhaps you meant to reference the column "index_state.active_version".
+- **T12 (FAIL)**: sql injection: HTTP 500; boolean injection: HTTP 500; null bytes and unicode: HTTP 500
 
 ## Details
 
 ### T1 - kill -9 the ingest mid-batch
 
-Result: **ERROR** (2.1s)
+Result: **ERROR** (60.1s)
 
-UndefinedTable: relation "records" does not exist
-LINE 1: DELETE FROM records WHERE source = 'met-museum'
-                    ^
-
+IndexError: list index out of range
 
 - note: Traceback (most recent call last):
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 535, in main
+  File "/app/backend/evaluation/eval2.py", line 535, in main
     res = fn()
           ^^^^
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 177, in t1_kill_ingest
-    sql("DELETE FROM records WHERE source = %s", (slug,))
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 70, in sql
-    cur.execute(query, params)
-psycopg2.errors.UndefinedTable: relation "records" does not exist
-LINE 1: DELETE FROM records WHERE source = 'met-museum'
-                    ^
-
+  File "/app/backend/evaluation/eval2.py", line 197, in t1_kill_ingest
+    cursor_after_kill = sql("SELECT cursor FROM sources WHERE slug = %s", (slug,))[0][0]
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
 
 
 ### T3 - unknown licence never appears
 
-Result: **ERROR** (0.0s)
+Result: **INCONCLUSIVE** (0.0s)
 
-UndefinedTable: relation "records" does not exist
-LINE 1: SELECT r.id::text, r.title, r.caption FROM records r
-                                                   ^
-
-
-- note: Traceback (most recent call last):
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 535, in main
-    res = fn()
-          ^^^^
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 254, in t3_unknown_licence
-    rows = sql("""SELECT r.id::text, r.title, r.caption FROM records r
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 70, in sql
-    cur.execute(query, params)
-psycopg2.errors.UndefinedTable: relation "records" does not exist
-LINE 1: SELECT r.id::text, r.title, r.caption FROM records r
-                                                   ^
-
+no unknown-licence record in an enabled source; ingest 'user-uploads' first
 
 
 ### T4 - version mismatch is refused loudly
 
-Result: **ERROR** (2.1s)
+Result: **ERROR** (0.0s)
 
-UndefinedTable: relation "index_state" does not exist
+UndefinedColumn: column "live_version" does not exist
 LINE 1: SELECT live_version FROM index_state LIMIT 1
-                                 ^
-
+               ^
+HINT:  Perhaps you meant to reference the column "index_state.active_version".
 
 - note: Traceback (most recent call last):
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 535, in main
+  File "/app/backend/evaluation/eval2.py", line 535, in main
     res = fn()
           ^^^^
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 285, in t4_version_mismatch
+  File "/app/backend/evaluation/eval2.py", line 285, in t4_version_mismatch
     original = sql("SELECT live_version FROM index_state LIMIT 1")[0][0]
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 70, in sql
+  File "/app/backend/evaluation/eval2.py", line 70, in sql
     cur.execute(query, params)
-psycopg2.errors.UndefinedTable: relation "index_state" does not exist
+psycopg.errors.UndefinedColumn: column "live_version" does not exist
 LINE 1: SELECT live_version FROM index_state LIMIT 1
-                                 ^
-
+               ^
+HINT:  Perhaps you meant to reference the column "index_state.active_version".
 
 
 ### T6 - takedown disappears from cached pages within 1 s
 
-Result: **ERROR** (2.1s)
+Result: **ERROR** (0.0s)
 
-UndefinedTable: relation "records" does not exist
-LINE 1: SELECT r.id::text, r.title, r.caption FROM records r
-                                                   ^
-
+UndefinedColumn: column r.status does not exist
+LINE 3: ...        WHERE r.license <> 'unknown' AND COALESCE(r.status, ...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "so.status".
 
 - note: Traceback (most recent call last):
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 535, in main
+  File "/app/backend/evaluation/eval2.py", line 535, in main
     res = fn()
           ^^^^
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 310, in t6_takedown_cached_pages
+  File "/app/backend/evaluation/eval2.py", line 310, in t6_takedown_cached_pages
     cands = sql("""SELECT r.id::text, r.title, r.caption FROM records r
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 70, in sql
+  File "/app/backend/evaluation/eval2.py", line 70, in sql
     cur.execute(query, params)
-psycopg2.errors.UndefinedTable: relation "records" does not exist
-LINE 1: SELECT r.id::text, r.title, r.caption FROM records r
-                                                   ^
-
+psycopg.errors.UndefinedColumn: column r.status does not exist
+LINE 3: ...        WHERE r.license <> 'unknown' AND COALESCE(r.status, ...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "so.status".
 
 
 ### T9 - paging is stable while 500 rows are ingested
 
 Result: **ERROR** (0.0s)
 
-UndefinedTable: relation "index_state" does not exist
+UndefinedColumn: column "live_version" does not exist
 LINE 1: SELECT live_version FROM index_state LIMIT 1
-                                 ^
-
+               ^
+HINT:  Perhaps you meant to reference the column "index_state.active_version".
 
 - note: Traceback (most recent call last):
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 535, in main
+  File "/app/backend/evaluation/eval2.py", line 535, in main
     res = fn()
           ^^^^
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 365, in t9_paging_during_ingest
+  File "/app/backend/evaluation/eval2.py", line 365, in t9_paging_during_ingest
     live = sql("SELECT live_version FROM index_state LIMIT 1")[0][0]
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "d:\myCodings\2024\garbage\learningWEB\js_cheat_part_code\media_searcher_cornflakes\eval2.py", line 70, in sql
+  File "/app/backend/evaluation/eval2.py", line 70, in sql
     cur.execute(query, params)
-psycopg2.errors.UndefinedTable: relation "index_state" does not exist
+psycopg.errors.UndefinedColumn: column "live_version" does not exist
 LINE 1: SELECT live_version FROM index_state LIMIT 1
-                                 ^
-
+               ^
+HINT:  Perhaps you meant to reference the column "index_state.active_version".
 
 
 ### T12 - huge and injection-style queries
 
-Result: **FAIL** (8.3s)
+Result: **FAIL** (0.0s)
 
-10,000 characters: HTTP 500; 10,000 characters: took 2.06s; sql injection: HTTP 500; sql injection: took 2.05s; boolean injection: HTTP 500; boolean injection: took 2.05s; null bytes and unicode: HTTP 500; null bytes and unicode: took 2.04s; records table is gone
+sql injection: HTTP 500; boolean injection: HTTP 500; null bytes and unicode: HTTP 500
 
-- 10,000 characters: http / seconds: `500 / 2.060`
-- sql injection: http / seconds: `500 / 2.054`
-- boolean injection: http / seconds: `500 / 2.046`
-- null bytes and unicode: http / seconds: `500 / 2.043`
-- records table still exists: `False`
+- 10,000 characters: http / seconds: `422 / 0.006`
+- sql injection: http / seconds: `500 / 0.007`
+- boolean injection: http / seconds: `500 / 0.006`
+- null bytes and unicode: http / seconds: `500 / 0.003`
+- records table still exists: `True`

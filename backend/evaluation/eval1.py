@@ -2,8 +2,9 @@ import urllib.request
 import urllib.error
 from datetime import datetime
 from pathlib import Path
+import os
 
-BASE_URL = "http://127.0.0.1:5000"
+BASE_URL = (os.getenv("API_URL") or "http://localhost:5000").rstrip("/")
 
 routes = [
     ["POST", "/v1/search"],

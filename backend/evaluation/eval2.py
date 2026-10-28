@@ -6,7 +6,7 @@ Run with:        python eval.py            (or: make eval)
 Run a subset:    python eval.py --only T3,T6
 Output:          EVAL_RESULTS.md (overwritten on every run; commit it, bad numbers included)
 
-Requirements:    pip install requests psycopg2-binary psutil python-dotenv
+Requirements:    pip install requests psycopg-binary psutil python-dotenv
 The backend server and the heavy worker must already be running against a
 DEVELOPMENT database: T1 and T9 write to, and delete from, the records table.
 
@@ -31,10 +31,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import psutil
-import psycopg2
+import psycopg
 import requests
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 
 try:
     from dotenv import load_dotenv
@@ -43,7 +43,7 @@ try:
 except ImportError:
     pass
 
-BASE = (os.getenv("EVAL_BASE_URL") or f"http://localhost:{os.getenv('PORT', '8000')}").rstrip("/")
+BASE = (os.getenv("API_URL") or "http://localhost:5000").rstrip("/")
 LOGIN_PATH = os.getenv("EVAL_LOGIN_PATH", "/v1/login")
 ADMIN_TOKEN = os.getenv("ADMIN_TOKEN", "shivamtoken123")
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -63,7 +63,7 @@ def result(status, summary, metrics=None, notes=None):
 
 
 def sql(query, params=()):
-    conn = psycopg2.connect(DATABASE_URL)
+    conn = psycopg.connect(DATABASE_URL)
     conn.autocommit = True
     try:
         cur = conn.cursor()

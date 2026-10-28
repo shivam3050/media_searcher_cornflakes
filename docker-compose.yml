@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: cornflakes
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./backend/models/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app -d cornflakes"]
+      interval: 5s
+      retries: 10
+
+  api:
+    build: .
+    working_dir: /app/backend
+    command: python server.py
+    environment:
+      PORT: 5000
+      DB_PORT: 5432
+      DATABASE_URL: postgresql://app:app@db:5432/cornflakes
+    ports:
+      - "5000:5000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; socket.create_connection(('localhost', 5000), 2)"]
+      interval: 5s
+      retries: 30
+
+volumes:
+  pgdata:
