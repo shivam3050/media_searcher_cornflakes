@@ -1,0 +1,16 @@
+record_id,title,year,visual_vector,caption_vector,source_id,current_state,license,nsfw_score,thumbnail_url
+img_001,Golden Retriever in park,2018,"[0.11, -0.23, ...]","[0.89, 0.12, ...]",unsplash,active,CC0,0.01,https://thumb.url/img_001.jpg
+img_002,Vintage Car 1950,1950,"[0.45, 0.88, ...]","[-0.12, 0.33, ...]",met-museum,active,Public Domain,0.00,https://thumb.url/img_002.jpg
+img_003,Cyberpunk Cityscape,2021,"[-0.77, 0.55, ...]","[0.44, -0.11, ...]",flickr,active,CC-BY,0.15,https://thumb.url/img_003.jpg
+img_004,Abstract Geometry,2015,"[0.99, -0.99, ...]","[0.10, 0.20, ...]",unsplash,active,CC0,0.05,https://thumb.url/img_004.jpg
+img_005,Violent Riot Scene,2019,"[0.34, 0.76, ...]","[-0.55, 0.88, ...]",flickr,quarantine,CC-BY,0.85,https://thumb.url/img_005.jpg
+img_006,Mona Lisa Sketch,1890,"[-0.22, 0.11, ...]","[0.66, 0.77, ...]",met-museum,active,Public Domain,0.00,https://thumb.url/img_006.jpg
+img_007,Spam Ad Banner,2022,"[0.88, 0.22, ...]","[-0.99, -0.11, ...]",user-uploads,disabled,Copyrighted,0.10,https://thumb.url/img_007.jpg
+img_008,Coffee cup on desk,2020,"[0.15, 0.35, ...]","[0.25, 0.45, ...]",unsplash,active,CC0,0.02,https://thumb.url/img_008.jpg
+img_009,Anatomy Drawing,1510,"[-0.45, 0.65, ...]","[0.75, -0.25, ...]",met-museum,active,Public Domain,0.60,https://thumb.url/img_009.jpg
+img_010,Sunset over mountains,2017,"[0.55, -0.85, ...]","[-0.35, 0.95, ...]",flickr,active,CC-BY-SA,0.01,https://thumb.url/img_010.jpg
+img_011,Nude Art Sculpture,1820,"[0.66, 0.44, ...]","[0.88, -0.77, ...]",met-museum,quarantine,Public Domain,0.92,https://thumb.url/img_011.jpg
+img_012,Macro shot of a bee,2019,"[-0.15, -0.55, ...]","[0.45, 0.65, ...]",unsplash,active,CC0,0.00,https://thumb.url/img_012.jpg
+img_013,Broken Link Image,2000,"[0.00, 0.00, ...]","[0.00, 0.00, ...]",flickr,disabled,Unknown,0.00,https://thumb.url/img_013.jpg
+img_014,Neon Sign Open,2016,"[0.85, 0.15, ...]","[-0.75, -0.85, ...]",unsplash,active,CC0,0.08,https://thumb.url/img_014.jpg
+img_015,Ancient Roman Coin,1100,"[-0.65, -0.25, ...]","[0.55, 0.35, ...]",met-museum,active,Public Domain,0.00,https://thumb.url/img_015.jpg
