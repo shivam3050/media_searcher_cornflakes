@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from controllers.controllers import (
+    login_user,
     search_records,
     get_similar_records,
     handle_takedown,
@@ -13,6 +14,9 @@ from controllers.controllers import (
 )
 
 router = APIRouter()
+
+# Auth
+router.add_api_route("/v1/login", login_user, methods=["POST"])
 
 # Public
 router.add_api_route("/v1/search", search_records, methods=["POST"])
