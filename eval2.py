@@ -43,7 +43,7 @@ try:
 except ImportError:
     pass
 
-BASE = os.getenv("EVAL_BASE_URL", "http://localhost:8000").rstrip("/")
+BASE = (os.getenv("EVAL_BASE_URL") or f"http://localhost:{os.getenv('PORT', '8000')}").rstrip("/")
 LOGIN_PATH = os.getenv("EVAL_LOGIN_PATH", "/v1/login")
 ADMIN_TOKEN = os.getenv("ADMIN_TOKEN", "shivamtoken123")
 DATABASE_URL = os.getenv("DATABASE_URL")
